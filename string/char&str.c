@@ -7,16 +7,21 @@ void main(){
     待后续getchar()调用读取。也就是说，后续的getchar()调用不会等待用户按键，而直接读取缓冲区中的字符，
     直到缓冲区中的字符读完为后，才等待用户按键。
     */
-    char* str = "hello";
+    char *str = "hello";
     char str1[10];
     char a = 'a';
-    printf("%s\n",str);
+    printf("%s\n",str+1);/*输入参数是已经定义好的“字符数组名”, 不用加&, 
+                        因为在C语言中数组名就代表该数组的起始地址
+                        str+1就是从首地址的下一个地址(首字母的下一个字母)开始读到\0
+                        所以打印ello
+                        */
     printf("%c\n",a);
     printf("input char\n");
     a = getchar();
     putchar(a);
+    printf("\n");
     printf("input str:\n");
-    scanf("%s",&str1);/*输入参数是已经定义好的“字符数组名”, 不用加&, 因为在C语言中数组名就代表该数组的起始地址*/
+    scanf("%s",str1);
     printf("%s\n",str1);
 
 }
