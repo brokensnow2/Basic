@@ -23,6 +23,9 @@ int main()
 		printf("%2d", array[count]);
 
 	free(array);
+	//释放野指针报错
+	//free(array);
     array = NULL;
+	free(array);//空指针可以多次释放
 	return 0;
 }
