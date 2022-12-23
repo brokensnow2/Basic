@@ -2,7 +2,8 @@
 
 int  main()
 {
-	int a[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+	int a[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };//不指定大小要赋值
+	int b[9];//指定大小可以不赋值
 	int i = 0;
 	int n = 9;
 	
@@ -10,6 +11,7 @@ int  main()
 	{
 		//printf("%d, ", a[i]);
 		printf("%d, ", *(a+i));
+		b[i] = a[i];
 	}
 	printf("\n");
 
@@ -25,6 +27,11 @@ int  main()
 	}
 	printf("\n");
 
+	for (i = 0; i < 9; i++)
+	{
+		printf("b[%d] is %d\n",i,b[i]);
+	}
+	
 
 	return 0;
 }
