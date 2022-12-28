@@ -11,6 +11,7 @@ struct student
 int main(){
 /*     
     struct student aaa;
+    //aaa.name = "zhangsan"不行，name是const ptr,不能改变name指向
     strcpy(aaa.name,"zhangsan");
     aaa.age = 20;
     aaa.score = 80;
