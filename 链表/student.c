@@ -62,8 +62,50 @@ void Printf(ss *p)
     
 }
 
+ss *Delete(ss* pHead,int id)
+{
+    if (id <= 0)
+    {
+        return pHead;
+    }
+    else if (id == 1)//删第一个
+    {
+        ss* temp = pHead->pNext;
+        free(pHead);
+        return temp;
+    }
+    else if (id > 1)//temp:要删的前一个  temp2:要删的那一个
+    {
+        ss* temp = pHead;
+        for (int i = 1; i < id-1; i++)
+        {
+            temp = temp->pNext;
+        }
+        ss* temp2 = temp->pNext;
+        if (temp2->pNext != NULL)
+        {
+            temp->pNext = temp2->pNext;
+            free(temp2); 
+        }
+        else//删最后一个
+        {
+            temp->pNext = NULL;
+        }
+        
+
+        return pHead;
+    }
+}
+
+int insert(ss* pHead, int id)
+{
+    return 0;
+}
+
 int main()
 {
     ss *p = create();
+    Printf(p);
+    p = Delete(p,2);
     Printf(p);
 }
