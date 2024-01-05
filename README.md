@@ -53,31 +53,37 @@
    4.4 下标和边界
    4.5 数组和指针和函数
    4.6 多维数组
-   4.7 VLA 变长数组 C99新增 如int a[variable1][variable2]；
+   4.7 VLA 变长数组 C99新增 如
+
+      ```
+      //variable1 variable2是变量
+      int a[variable1][variable2];
+      ```
+
 5. 字符串
    5.1 在C语言中字符串是char型数组并以空字符(\0)结尾的数组。
    5.2 处理字符和字符串的一些函数
-      5.2.1 字符，字符串通用输入函数scanf。注意：由于scanf()和gets()无法知道字符串s大小，必须遇到换行符或读到文件结尾为止才接收输入，因此容易导致字符数组越界(缓冲区溢出)的情况。
-      5.2.2 字符，字符串通用输出函数printf
-      5.2.3 字符串输入函数gets，gets_s //C11新增，fgets
-      //注意gets和fgets区别 *--① Ch 11.2.3*
-      5.2.4 字符串输出函数puts，fputs //puts会在待输出字符串末尾加上换行符，fputs不会
-      5.2.5 字符输入函数getchar
-      5.2.6 字符输出函数putchar
-      5.2.7 字符串函数strlen，strcat,strncat,strcmp,strncmp,strcpy,strncpy,sprintf,strchr,strrchrstrstr,strtok
+   5.2.1 字符，字符串通用输入函数scanf。注意：由于scanf()和gets()无法知道字符串s大小，必须遇到换行符或读到文件结尾为止才接收输入，因此容易导致字符数组越界(缓冲区溢出)的情况。
+   5.2.2 字符，字符串通用输出函数printf
+   5.2.3 字符串输入函数gets，gets_s //C11新增，fgets
+   //注意gets和fgets区别 *--① Ch 11.2.3*
+   5.2.4 字符串输出函数puts，fputs //puts会在待输出字符串末尾加上换行符，fputs不会
+   5.2.5 字符输入函数getchar
+   5.2.6 字符输出函数putchar
+   5.2.7 字符串函数strlen，strcat,strncat,strcmp,strncmp,strcpy,strncpy,sprintf,strchr,strrchrstrstr,strtok
 6. 指针
 7. 函数
 8. 内存管理
 9. 结构体
 10. 文件输入输出
 11. 预处理器
-      11.1 预处理器
-      11.2 预处理指令：以#开头的一些指令
-      11.3 宏：#define 宏 替换体，有类对象宏和类函数宏
+    11.1 预处理器
+    11.2 预处理指令：以#开头的一些指令
+    11.3 宏：#define 宏 替换体，有类对象宏和类函数宏
 12. C库
-      12.1 访问C库
-      12.2 数学库
-      12.3 通用工具库
-      12.4 断言库
-      12.5 可变参数 stdarg.h
+    12.1 访问C库
+    12.2 数学库
+    12.3 通用工具库
+    12.4 断言库
+    12.5 可变参数 stdarg.h
 13. ADT
