@@ -10,7 +10,12 @@ int main(){
     else
     {
         printf("ok,ptr:%p\n",file);
-        while ((i=fgetc(file)) != EOF)
+        /**
+         * 检测到文件结尾返回EOF end 0f file 
+         * 像getchar，scanf，fgetc等
+         * EOF通常定义在stdio.h 
+         */
+        while ((i=fgetc(file)) != EOF)//右键转到定义
         {
             printf("%c",i);
         }

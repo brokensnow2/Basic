@@ -5,9 +5,9 @@ int main(){
 	char src[] = "hello world";
 	printf("a = %d, src = %s", a, src);
 	printf("\n");
-
-	int len = sprintf(dst, "a = %d,src = %s", a, src); //将双引号中的变为字符串放到dst中
+	 //将双引号中的变为字符串放到dst中
+	int len = sprintf(dst, "a = %d,src = %s", a, src);
 	printf("dst = \" %s\"\n", dst);
     int len2 = strlen(dst);
-	printf("len = %d\n,len2 = %d", len,len2);
+	printf("len = %d\nlen2 = %d", len,len2);
 }
