@@ -30,7 +30,6 @@
 
    - 运算符
 
-
    | 运算符类型   | 作用                                   |
    | ------------ | -------------------------------------- |
    | 算术运算符   | 用于处理四则运算                       |
@@ -60,6 +59,7 @@
    //variable1 variable2是变量
    int a[variable1][variable2];
    ```
+
 5. 字符串
    5.1 在C语言中字符串是char型数组并以空字符(\0)结尾的数组。
    5.2 处理字符和字符串的一些函数
@@ -73,7 +73,26 @@
    5.2.7 字符串函数strlen，strcat,strncat,strcmp,strncmp,strcpy,strncpy,sprintf,strchr,strrchrstrstr,strtok
    5.2.8 字符分类函数isdigit等，字符转换函数toupper,tolower *--② Ch.9.8*
 6. 指针
+   详见代码
 7. 函数
+   7.1 函数声明和定义和函数原型
+
+   ```
+   //函数原型式声明
+   int func(int a,int b);
+   //或者
+   int func(int ,int);
+   //函数定义：类型 函数名（形参） 代码块
+   int func(int a,int b)
+   {
+      return a+b;
+   }
+   ```
+
+   7.2 C语言全是值传递，见指针代码中指针与引用的区别.c
+   7.3 ADT和黑盒
+   7.4 递归
+   7.5 可变参数列表
 8. 内存管理
 9. 结构体
 10. 文件输入输出

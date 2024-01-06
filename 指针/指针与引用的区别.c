@@ -50,11 +50,15 @@ void ReverseUsingPointer(LNode *p) {
     p->data = 50;  // 修改指针所指向对象的data属性
 }
 
-// 使用引用作为参数
+/**
+//使用引用作为参数;
+//cpp行，c会报错，
+//c语言会认为是取node地址，但没有名称，
+//报错：存在正文时不允许未命名的原型参数
 void ReverseUsingReference(LNode &node) {
     node.data = 60;  // 修改引用所指向对象的data属性
 }
-
+*/
 int main() {
     LNode node1 = {10};
     
