@@ -30,6 +30,7 @@
 
    - 运算符
 
+
    | 运算符类型   | 作用                                   |
    | ------------ | -------------------------------------- |
    | 算术运算符   | 用于处理四则运算                       |
@@ -55,11 +56,10 @@
    4.6 多维数组
    4.7 VLA 变长数组 C99新增 如
 
-      ```
-      //variable1 variable2是变量
-      int a[variable1][variable2];
-      ```
-
+   ```
+   //variable1 variable2是变量
+   int a[variable1][variable2];
+   ```
 5. 字符串
    5.1 在C语言中字符串是char型数组并以空字符(\0)结尾的数组。
    5.2 处理字符和字符串的一些函数
@@ -71,6 +71,7 @@
    5.2.5 字符输入函数getchar
    5.2.6 字符输出函数putchar
    5.2.7 字符串函数strlen，strcat,strncat,strcmp,strncmp,strcpy,strncpy,sprintf,strchr,strrchrstrstr,strtok
+   5.2.8 字符分类函数isdigit等，字符转换函数toupper,tolower *--② Ch.9.8*
 6. 指针
 7. 函数
 8. 内存管理

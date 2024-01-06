@@ -1,45 +1,44 @@
+//luanch.json用来配置调试和执行可执行文件
+//.exe的路径不能有中文，会报错，与mingw有关
+//switch里的文件可以执行调试，其他的不行
+//建议用C/C++ Compile Run扩展，或者自己手打gcc命令
 {
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-      {
-        "name": "(gdb) Launch",
-        "type": "cppdbg",
-        "request": "launch",
-        "program": "${workspaceFolder}/${fileBasenameNoExtension}.exe",
-        "args": [],
-        "stopAtEntry": false,
-        "cwd": "${workspaceFolder}",
-        "environment": [],
-        "externalConsole": true,
-        "MIMode": "gdb",
-        "miDebuggerPath": "C:\\MINGW\\bin\\gdb.exe",
-        "setupCommands": [
-          {
-            "description": "Enable pretty-printing for gdb",
-            "text": "-enable-pretty-printing",
-            "ignoreFailures": true
-          }
-        ],
-        "preLaunchTask": "complie"
-      },
-      {
-        "name": "C/C++ Runner: Debug Session",
-        "type": "cppdbg",
-        "request": "launch",
-        "args": [],
-        "stopAtEntry": false,
-        "externalConsole": true,
-        "cwd": "e:/CStudy/study1",
-        "program": "E:/CStudy/study1/build/Debug/outDebug",
-        "MIMode": "gdb",
-        "miDebuggerPath": "gdb",
-        "setupCommands": [
-          {
-            "description": "Enable pretty-printing for gdb",
-            "text": "-enable-pretty-printing",
-            "ignoreFailures": true
-          }
-        ]
-      }
+
+        {
+            "name": "(gdb) Windows 上的 Bash 启动",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/output/${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "pipeTransport": {
+                "debuggerPath": "/usr/bin/gdb",
+                "pipeProgram": "${env:windir}\\system32\\bash.exe",
+                "pipeArgs": ["-c"],
+                "pipeCwd": ""
+            },
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "将反汇编风格设置为 Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+
     ]
-  }
+
+}

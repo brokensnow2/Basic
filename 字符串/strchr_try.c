@@ -8,6 +8,7 @@ int main()
     char *haystack = "RUNOOBR00RR1R11";
     const char needle = 'R';
     char *ret = strchr(haystack,needle);
+    printf("%c\n",ret);
     while (ret!=NULL)
     {
         n++;
