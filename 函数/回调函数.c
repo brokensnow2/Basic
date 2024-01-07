@@ -20,7 +20,7 @@
 //声明一个函数指针
 //返回的是int 
 //注意int* compare()是指返回的是int*
-//所以函数名要打括号
+//所以函数名要打括号表示这是函数指针
 int (*compare)(void const*,void const*);
 //实现一个
 int compareAchieve(void const* node,void const* value)
